@@ -159,7 +159,7 @@ p.section-text {
 }
 
 .back-bg {
-    background-image: url('/assets/images/second-bg.png');
+    background-image: url('../assets/images/second-bg.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
