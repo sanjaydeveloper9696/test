@@ -76,6 +76,11 @@ li.nav-item {
     padding: 0px 20px;
 }
 
+.navbar-nav .nav-link.active {
+    font-weight: 700;
+    color: #ff1f1f;
+}
+
 .bg-light {
     padding: 8px;
 }
@@ -132,7 +137,6 @@ p.section-text {
 
 .feature-box {
     text-align: center;
-    padding: 20px;
 }
 
 .feature-box h4 {
