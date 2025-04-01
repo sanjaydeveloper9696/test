@@ -72,13 +72,12 @@ body {
 }
 
 
-
+li.nav-item {
+    padding: 0px 20px;
+}
 
 .bg-light {
-    --bs-bg-opacity: 1;
-    background-color: rgb(255 255 255) !important;
     padding: 15px;
-    border-bottom: 1px solid #f0e6e6;
 }
 
 .brand-logo {
@@ -240,7 +239,7 @@ img.app-preview {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    padding: 5% 0% 9% 0%;
+    padding: 4.5% 0% 4.5% 0%;
     color: #fff;
     margin-bottom: 4%;
 
@@ -272,7 +271,7 @@ img.app-preview {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    padding: 60px 0;
+    padding: 60px 0px 10px 0px;
     color: white;
     position: relative;
 }
@@ -282,10 +281,12 @@ img.app-preview {
     text-decoration: none;
 }
 .date-for{
-width: 200px;
+width: 70%;
 
 }
-
+.footer hr {
+    border-color: #fff !important;
+}
 
 .social-icon{
 width: 40px;
@@ -320,8 +321,14 @@ width: 20px;
     border-color: rgba(255, 255, 255, 0.2);
 }
 
-
-
+.footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+}
+.fw-bold {
+    font-weight: 500 !important;
+}
 
 .footer::before {
     content: "";
