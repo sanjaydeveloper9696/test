@@ -3,6 +3,7 @@
     .container.header-pd {
         padding: 3px 8px;
     }
+
     .bg-light {
         --bs-bg-opacity: 1;
         background-color: rgb(255 255 255) !important;
@@ -45,6 +46,7 @@
         text-align: center;
         padding: 8% 2% 1% 2%;
     }
+
     .img-fluid {
         width: 325px;
     }
@@ -53,22 +55,32 @@
         padding: 10% 1% 30% 1%;
         text-align: center;
 
-}
-.privacy-feature{
-padding: 3%;
+    }
 
-}
-..heading-title {
-    font-size: 18px;
-}
+    .privacy-feature {
+        padding: 3%;
 
-.download-button img {
-    width: 150px;
-}
+    }
+
+    .heading-title {
+        font-size: 18px;
+    }
+
+    .download-button img {
+        width: 150px;
+    }
+
+    .slider-pd{
+        padding: 0px;
+    }
 
 
+    /* footer csss */
 
-/* footer csss */
-
-
+    .mail-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
 }
