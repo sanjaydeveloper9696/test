@@ -200,6 +200,10 @@ width: 400px;
     font-size: 22px;
     font-weight: 600;
 }
+.heading-paragraph{
+    font-size: 17px;
+    font-weight: 400;
+}
 
 .privacy-feature {
     display: flex;
@@ -214,6 +218,10 @@ width: 400px;
 
 .Confidential{
     width: 45px;
+}
+.your-privacy {
+    text-align: center;
+    padding: 2% 2% 4% 2%;
 }
 
 img.app-preview {

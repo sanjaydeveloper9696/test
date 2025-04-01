@@ -65,6 +65,8 @@
     .heading-title {
         font-size: 18px;
     }
+    .heading-paragraph {
+        font-size: 14px;
 
     .download-button img {
         width: 150px;
@@ -80,7 +82,7 @@
         padding: 0px;
     }
 
-    .get-connection {
+    .your-privacy {
         text-align: center;
         padding: 0% 2% 9% 2%;
         margin-top: -40px;
@@ -100,4 +102,4 @@
         align-items: center;
         gap: 10px;
     }
-}
+}}
