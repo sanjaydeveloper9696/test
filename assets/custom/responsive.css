@@ -69,6 +69,12 @@
     .download-button img {
         width: 150px;
     }
+    .mail-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
 
     .slider-pd{
         padding: 0px;
