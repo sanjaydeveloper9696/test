@@ -94,6 +94,11 @@
 }
 
 
+.p.section-text {
+    color: #fff;
+    margin: 0px 0px 0px 0px;
+}
+
     /* footer csss */
 
     .mail-info {
