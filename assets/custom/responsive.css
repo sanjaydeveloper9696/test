@@ -80,6 +80,17 @@
         padding: 0px;
     }
 
+    .get-connection {
+        text-align: center;
+        padding: 0% 2% 9% 2%;
+        margin-top: -40px;
+    }
+
+
+.lead {
+    font-size: 14px;
+}
+
 
     /* footer csss */
 
