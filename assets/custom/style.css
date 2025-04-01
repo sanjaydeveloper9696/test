@@ -91,7 +91,7 @@ h2 {
 }
 
 .section-2 {
-    background-image: url('/assets/images/banner-bg.png');
+    background-image: url('assets/images/banner-bg.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -159,7 +159,7 @@ p.section-text {
 }
 
 .back-bg {
-    background-image: url('/assets/images/second-bg.png');
+    background-image: url('assets/images/second-bg.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -223,7 +223,7 @@ img.app-preview {
 
 .section-download {
 
-    background-image: url('/assets/images/download-bg.png');
+    background-image: url('assets/images/download-bg.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
