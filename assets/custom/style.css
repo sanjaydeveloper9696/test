@@ -1,62 +1,62 @@
 @font-face {
     font-family: 'Poppins';
-    src: url('assets/fonts/Poppins-Thin.ttf') format('truetype');
+    src: url('/assets/fonts/Poppins-Thin.ttf') format('truetype');
     font-weight: 100;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Poppins';
-    src: url('assets/fonts/Poppins-ExtraLight.ttf') format('truetype');
+    src: url('/assets/fonts/Poppins-ExtraLight.ttf') format('truetype');
     font-weight: 200;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Poppins';
-    src: url('assets/fonts/Poppins-Light.ttf') format('truetype');
+    src: url('/assets/fonts/Poppins-Light.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Poppins';
-    src: url('assets/fonts/Poppins-Regular.ttf') format('truetype');
+    src: url('/assets/fonts/Poppins-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Poppins';
-    src: url('assets/fonts/Poppins-Medium.ttf') format('truetype');
+    src: url('/assets/fonts/Poppins-Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Poppins';
-    src: url('assets/fonts/Poppins-SemiBold.ttf') format('truetype');
+    src: url('/assets/fonts/Poppins-SemiBold.ttf') format('truetype');
     font-weight: 600;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Poppins';
-    src: url('assets/fonts/Poppins-Bold.ttf') format('truetype');
+    src: url('/assets/fonts/Poppins-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Poppins';
-    src: url('assets/fonts/Poppins-ExtraBold.ttf') format('truetype');
+    src: url('/assets/fonts/Poppins-ExtraBold.ttf') format('truetype');
     font-weight: 800;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Poppins';
-    src: url('assets/fonts/Poppins-Black.ttf') format('truetype');
+    src: url('/assets/fonts/Poppins-Black.ttf') format('truetype');
     font-weight: 900;
     font-style: normal;
 }
@@ -159,7 +159,7 @@ p.section-text {
 }
 
 .back-bg {
-    background-image: url('../images/background-ft.png');
+    background-image: url('/assets/images/second-bg.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -223,7 +223,7 @@ img.app-preview {
 
 .section-download {
 
-    background-image: url('assets/images/download-bg.png');
+    background-image: url('/assets/images/download-bg.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -255,7 +255,7 @@ img.app-preview {
 
 
 .footer {
-   background-image: url('assets/images/background-ft.png');
+   background-image: url('/assets/images/background-ft.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
