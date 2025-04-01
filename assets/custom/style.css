@@ -28,42 +28,42 @@
 
 @font-face {
     font-family: 'Poppins';
-    src: url('assets/fonts/Poppins-Medium.ttf') format('truetype');
+    src: url('/assets/fonts/Poppins-Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Poppins';
-    src: url('assets/fonts/Poppins-SemiBold.ttf') format('truetype');
+    src: url('/assets/fonts/Poppins-SemiBold.ttf') format('truetype');
     font-weight: 600;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Poppins';
-    src: url('assets/fonts/Poppins-Bold.ttf') format('truetype');
+    src: url('/assets/fonts/Poppins-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Poppins';
-    src: url('assets/fonts/Poppins-ExtraBold.ttf') format('truetype');
+    src: url('/assets/fonts/Poppins-ExtraBold.ttf') format('truetype');
     font-weight: 800;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Poppins';
-    src: url('assets/fonts/Poppins-Black.ttf') format('truetype');
+    src: url('/assets/fonts/Poppins-Black.ttf') format('truetype');
     font-weight: 900;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Selina';
-    src: url('assets/fonts/Selina-Black-Italic-W08-Rg.ttf') format('truetype');
+    src: url('/assets/fonts/Selina-Black-Italic-W08-Rg.ttf') format('truetype');
     font-weight: 900;
     font-style: normal;
 }
@@ -91,7 +91,7 @@ h2 {
 }
 
 .section-2 {
-    background-image: url('/assets/images/banner-bg.png');
+    background-image: url('/..assets/images/banner-bg.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -159,7 +159,7 @@ p.section-text {
 }
 
 .back-bg {
-    background-image: url('/./assets/images/second-bg.png');
+    background-image: url('/assets/images/second-bg.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
