@@ -86,19 +86,19 @@
 
         .dropdown-menu {
             position: absolute;
-            top: 100%;
+            top: 148%;
             left: 0;
             background-color: white;
             width: 200px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            border-radius: 0.5rem;
+            /* border-radius: 0.5rem; */
             opacity: 0;
             visibility: hidden;
             transform: translateY(10px);
             transition: all 0.3s ease;
             z-index: 100;
             list-style: none;
-            padding: 0.5rem 0;
+            /* padding: 0.5rem 0; */
         }
 
         .nav-item:hover .dropdown-menu {
@@ -108,7 +108,7 @@
         }
 
         .dropdown-item {
-            padding: 0.5rem 1rem;
+            /* padding: 0.5rem 1rem; */
         }
 
         .dropdown-link {
@@ -117,11 +117,13 @@
             display: block;
             transition: all 0.3s;
             padding: 0.5rem 1rem;
+            border-bottom: 1px solid;
         }
 
         .dropdown-link:hover {
             color: var(--primary-color);
             background-color: #f1f5f9;
+            border-bottom: 1px solid var(--primary-color);
         }
 
         .login-btn {
@@ -303,7 +305,7 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             Services
-                            <i class="fas fa-chevron-down" style="font-size: 12px; margin-left: 5px;"></i>
+                            <i class="fa-solid fa-caret-down" style="font-size: 12px; margin-left: 5px;"></i>
                         </a>
                         <ul class="dropdown-menu">
                             <li class="dropdown-item">
@@ -323,7 +325,7 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             Products
-                            <i class="fas fa-chevron-down" style="font-size: 12px; margin-left: 5px;"></i>
+                            <i class="fa-solid fa-caret-down" style="font-size: 12px; margin-left: 5px;"></i>
                         </a>
                         <ul class="dropdown-menu">
                             <li class="dropdown-item">
