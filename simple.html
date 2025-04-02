@@ -3,281 +3,489 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | LoveQuest Dating Game</title>
+    <title>Fixed Responsive Header</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* ==== Global Styles ==== */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        
+
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --text-color: #333;
+            --light-color: #f8fafc;
+            --dark-color: #1e293b;
+        }
+
         body {
-            background-color: #fef6f6;
-            color: #333;
-            line-height: 1.6;
+            padding-top: 80px;
         }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* ==== Banner Section ==== */
-        .banner {
-            background: linear-gradient(135deg, #ff6b8b, #ff8e53);
-            color: white;
-            text-align: center;
-            padding: 60px 20px;
-            margin-bottom: 40px;
-            border-radius: 0 0 20px 20px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-        
-        .banner h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-        
-        .banner p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-        
-        /* ==== Contact Section ==== */
-        .contact-section {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-            margin-bottom: 50px;
-        }
-        
-        .contact-info, .contact-form {
-            flex: 1;
-            min-width: 300px;
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-        }
-        
-        .contact-info h2, .contact-form h2 {
-            color: #ff6b8b;
-            margin-bottom: 20px;
-            font-size: 1.8rem;
-        }
-        
-        .contact-method {
-            margin-bottom: 20px;
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
-        }
-        
-        .contact-method i {
-            font-size: 1.5rem;
-            color: #fff;
-            margin-top: 3px;
-        }
-        
-        .contact-method h3 {
-            font-size: 1.2rem;
-            margin-bottom: 5px;
-        }
-        
-        /* ==== Social Media Links ==== */
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        
-        .social-links a {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            background: #ff6b8b;
-            color: white;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 40px;
-            transition: all 0.3s ease;
-        }
-        
-        .social-links a:hover {
-            background: #ff4757;
-            transform: translateY(-3px);
-        }
-        
-        /* ==== Contact Form ==== */
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: #555;
-        }
-        
-        .form-group input, 
-        .form-group textarea, 
-        .form-group select {
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: border 0.3s ease;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
         }
-        
-        .form-group input:focus, 
-        .form-group textarea:focus, 
-        .form-group select:focus {
-            border-color: #ff6b8b;
-            outline: none;
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
         }
-        
-        .form-group textarea {
-            height: 120px;
-            resize: vertical;
+
+        .logo {
+            display: flex;
+            align-items: center;
         }
-        
-        .submit-btn {
-            background: #ff6b8b;
+
+        .logo img {
+            height: 40px;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-list {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-item {
+            position: relative;
+            margin: 0 1rem;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            padding: 0.5rem 0;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+
+
+        }
+
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: white;
+            width: 200px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 0.5rem;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+            z-index: 100;
+            list-style: none;
+            padding: 0.5rem 0;
+        }
+
+        .nav-item:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-item {
+            padding: 0.5rem 1rem;
+        }
+
+        .dropdown-link {
+            text-decoration: none;
+            color: var(--text-color);
+            display: block;
+            transition: all 0.3s;
+            padding: 0.5rem 1rem;
+        }
+
+        .dropdown-link:hover {
+            color: var(--primary-color);
+            background-color: #f1f5f9;
+        }
+
+        .login-btn {
+            background-color: var(--primary-color);
             color: white;
             border: none;
-            padding: 12px 25px;
-            border-radius: 8px;
+            padding: 0.6rem 1.2rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
             cursor: pointer;
-            font-size: 1rem;
-            font-weight: 600;
-            transition: all 0.3s ease;
+            transition: background-color 0.3s;
+            /* margin-left: 1rem; */
         }
-        
-        .submit-btn:hover {
-            background: #ff4757;
-            transform: translateY(-2px);
+
+        .login-btn:hover {
+            background-color: var(--secondary-color);
         }
-        
-    
-        /* ==== Responsive Adjustments ==== */
-        @media (max-width: 768px) {
-            .banner h1 {
-                font-size: 2.2rem;
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-color);
+            cursor: pointer;
+        }
+
+        /* Mobile Menu Styles */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 80%;
+            max-width: 350px;
+            height: 100vh;
+            background-color: white;
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+            transition: left 0.3s ease;
+            z-index: 1100;
+            padding: 1rem;
+            overflow-y: auto;
+        }
+
+        .mobile-menu.active {
+            left: 0;
+        }
+
+        .mobile-menu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .mobile-menu-close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .mobile-nav-list {
+            list-style: none;
+        }
+
+        .mobile-nav-item {
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .mobile-nav-link {
+            display: block;
+            padding: 0.8rem 0;
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+        }
+
+        .mobile-dropdown-menu {
+            list-style: none;
+            padding-left: 0.4rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .mobile-dropdown-menu.active {
+            max-height: 500px;
+        }
+
+        .mobile-dropdown-item {
+            padding: 0.5rem 0;
+        }
+
+        .mobile-dropdown-link {
+            display: block;
+            text-decoration: none;
+            color: var(--text-color);
+            padding: 0.5rem 0;
+        }
+
+        .dropdown-toggle {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            background: none;
+            border: none;
+            text-align: left;
+            font: inherit;
+            color: inherit;
+            cursor: pointer;
+            padding: 0.8rem 0;
+        }
+
+        .dropdown-toggle i {
+            transition: transform 0.3s;
+        }
+
+        .dropdown-toggle.active i {
+            transform: rotate(180deg);
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1050;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
+
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .nav-menu {
+                display: none;
             }
-            
-            .banner p {
-                font-size: 1rem;
+
+            .mobile-menu-btn {
+                display: block;
             }
-            
-            .contact-section {
-                flex-direction: column;
+        }
+
+        @media (max-width: 576px) {
+            .header-container {
+                padding: 1rem;
+            }
+
+            .logo img {
+                height: 32px;
             }
         }
     </style>
-    <!-- Font Awesome for icons (optional) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <!-- Banner Section -->
-    <div class="banner">
-        <div class="container">
-            <h1>Get in Touch!</h1>
-            <p>We'd love to hear from you. Reach out for support, feedback, or just to say hello!</p>
-        </div>
-    </div>
-    
-    <!-- Main Contact Section -->
-    <div class="container">
-        <div class="contact-section">
-            <!-- Contact Info -->
-            <div class="contact-info">
-                <h2>Contact Information</h2>
-                
-                <div class="contact-method">
-                    <i class="fas fa-envelope"></i>
-                    <div>
-                        <h3>Email Us</h3>
-                        <p>support@lovequest.com</p>
-                    </div>
-                </div>
-                
-                <div class="contact-method">
-                    <i class="fas fa-phone-alt"></i>
-                    <div>
-                        <h3>Call Us</h3>
-                        <p>+1 (800) 123-4567</p>
-                        <p><small>Mon-Fri, 9AM-6PM EST</small></p>
-                    </div>
-                </div>
-                
-                <div class="contact-method">
-                    <i class="fas fa-comment-dots"></i>
-                    <div>
-                        <h3>Live Chat</h3>
-                        <p>Available 24/7 in the app</p>
-                    </div>
-                </div>
-                
-                <div class="contact-method">
-                    <i class="fas fa-hashtag"></i>
-                    <div>
-                        <h3>Follow Us</h3>
-                        <div class="social-links">
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-tiktok"></i></a>
-                        </div>
-                    </div>
-                </div>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="assets/images/date-for-sure-1.png" alt="Company Logo">
             </div>
+
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            Services
+                            <i class="fas fa-chevron-down" style="font-size: 12px; margin-left: 5px;"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item">
+                                <a href="#" class="dropdown-link">Web Design</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="#" class="dropdown-link">Development</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="#" class="dropdown-link">SEO</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="#" class="dropdown-link">Marketing</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            Products
+                            <i class="fas fa-chevron-down" style="font-size: 12px; margin-left: 5px;"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item">
+                                <a href="#" class="dropdown-link">Product 1</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="#" class="dropdown-link">Product 2</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="#" class="dropdown-link">Product 3</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <button class="login-btn">Login</button>
+            </nav>
+
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <img src="assets/images/date-for-sure-1.png" alt="Company Logo">
+            </div>
+            <button class="mobile-menu-close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <ul class="mobile-nav-list">
+            <li class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link">Home</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link">About</a>
+            </li>
+            <li class="mobile-nav-item">
+                <button class="mobile-nav-link dropdown-toggle">
+                    Services
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <ul class="mobile-dropdown-menu">
+                    <li class="mobile-dropdown-item">
+                        <a href="#" class="mobile-dropdown-link">Web Design</a>
+                    </li>
+                    <li class="mobile-dropdown-item">
+                        <a href="#" class="mobile-dropdown-link">Development</a>
+                    </li>
+                    <li class="mobile-dropdown-item">
+                        <a href="#" class="mobile-dropdown-link">SEO</a>
+                    </li>
+                    <li class="mobile-dropdown-item">
+                        <a href="#" class="mobile-dropdown-link">Marketing</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="mobile-nav-item">
+                <button class="mobile-nav-link dropdown-toggle">
+                    Products
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <ul class="mobile-dropdown-menu">
+                    <li class="mobile-dropdown-item">
+                        <a href="#" class="mobile-dropdown-link">Product 1</a>
+                    </li>
+                    <li class="mobile-dropdown-item">
+                        <a href="#" class="mobile-dropdown-link">Product 2</a>
+                    </li>
+                    <li class="mobile-dropdown-item">
+                        <a href="#" class="mobile-dropdown-link">Product 3</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link">Contact</a>
+            </li>
+            <li class="mobile-nav-item">
+                <button class="login-btn" style="width: 100%; margin-top: 1rem;">Login</button>
+            </li>
+        </ul>
+    </div>
+
+    <div class="overlay"></div>
+
+    <!-- Page Content -->
+    <main style="padding: 2rem;">
+        <h1>Welcome to Our Website</h1>
+        <p>This is the main content of your page. Scroll down to see the fixed header in action.</p>
+        <p>Desktop navbar dropdowns now work properly on hover.</p>
+        <div style="height: 1200px;"></div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const mobileMenuClose = document.querySelector('.mobile-menu-close');
+            const overlay = document.querySelector('.overlay');
+            const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
+            // Toggle mobile menu
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.add('active');
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+
+            // Close mobile menu
+            mobileMenuClose.addEventListener('click', function() {
+                mobileMenu.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+
+            overlay.addEventListener('click', function() {
+                mobileMenu.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+
+            // Mobile dropdown functionality
+            dropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', function() {
+                    const dropdownMenu = this.nextElementSibling;
+                    this.classList.toggle('active');
+                    dropdownMenu.classList.toggle('active');
+                });
+            });
+
+            // Improved desktop dropdown handling
+            const navItems = document.querySelectorAll('.nav-item');
             
-            <!-- Contact Form -->
-            <div class="contact-form">
-                <h2>Send Us a Message</h2>
-                <form>
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" placeholder="John Doe" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" placeholder="your@email.com" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <select id="subject">
-                            <option value="support">Support</option>
-                            <option value="feedback">Feedback</option>
-                            <option value="business">Business Inquiry</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Your Message</label>
-                        <textarea id="message" placeholder="How can we help you?"></textarea>
-                    </div>
-                    
-                    <button type="submit" class="submit-btn">Send Message <i class="fas fa-paper-plane"></i></button>
-                </form>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>© 2023 LoveQuest Dating Game. All rights reserved.</p>
-        </div>
-    </footer>
+            navItems.forEach(item => {
+                // Show dropdown on hover
+                item.addEventListener('mouseenter', function() {
+                    const dropdown = this.querySelector('.dropdown-menu');
+                    if (dropdown) {
+                        dropdown.style.opacity = '1';
+                        dropdown.style.visibility = 'visible';
+                        dropdown.style.transform = 'translateY(0)';
+                    }
+                });
+                
+                // Hide dropdown when mouse leaves
+                item.addEventListener('mouseleave', function() {
+                    const dropdown = this.querySelector('.dropdown-menu');
+                    if (dropdown) {
+                        dropdown.style.opacity = '0';
+                        dropdown.style.visibility = 'hidden';
+                        dropdown.style.transform = 'translateY(10px)';
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
