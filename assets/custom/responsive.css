@@ -67,6 +67,11 @@
     }
     .heading-paragraph {
         font-size: 14px;}
+.download-button
+  
+{
+     gap:0px; 
+}
 
     .download-button img {
         width: 150px;
